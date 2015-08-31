@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -56,10 +56,22 @@
                                     <action selector="onGameStart:" destination="2" eventType="touchUpInside" id="UXC-sC-Dy6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-zw-ABm">
+                                <rect key="frame" x="116" y="415" width="89" height="30"/>
+                                <state key="normal" title="Reset Puzzle">
+                                    <color key="titleColor" red="0.74901960779999999" green="0.0" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onReset:" destination="2" eventType="touchUpInside" id="LRm-PX-VnF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3aW-zw-ABm" firstAttribute="centerX" secondItem="E3Q-jP-svq" secondAttribute="centerX" id="GBM-f3-Mqg"/>
                             <constraint firstItem="E3Q-jP-svq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="290" id="Oll-b9-OaT"/>
+                            <constraint firstItem="3aW-zw-ABm" firstAttribute="top" secondItem="E3Q-jP-svq" secondAttribute="bottom" constant="95" id="Pul-0t-a6e"/>
                             <constraint firstItem="Gcp-t4-Az5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="242" id="Vba-Og-Zj0"/>
                             <constraint firstItem="7sZ-EI-Vrc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="81" id="Vho-qZ-qdk"/>
                             <constraint firstItem="bwZ-D8-Mbb" firstAttribute="centerX" secondItem="E3Q-jP-svq" secondAttribute="centerX" id="Z9h-zL-yOj"/>
@@ -82,9 +94,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

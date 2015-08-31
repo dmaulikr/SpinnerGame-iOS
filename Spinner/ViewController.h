@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet Components *spinner;
 - (IBAction)onDismissKeyboard:(id)sender;
 - (IBAction)onGameStart:(id)sender;
+- (IBAction)onReset:(id)sender;
 
 
 

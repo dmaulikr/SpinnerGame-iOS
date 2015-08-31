@@ -115,6 +115,10 @@
     }
 }
 
+- (IBAction)onReset:(id)sender {
+    [self resetPicker];
+}
+
 
 -(void) resetPicker            // reset game
 {
