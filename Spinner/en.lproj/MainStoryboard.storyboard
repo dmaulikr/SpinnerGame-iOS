@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Efk-Hg-yVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhC-Uz-VM9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-D8-Mbb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="5HR-ec-Veg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="77h-Ox-iN5"/>
+                                    <outlet property="delegate" destination="2" id="L93-bi-vLk"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Seed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcp-t4-Az5">
+                                <rect key="frame" x="20" y="242" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example: 149" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sZ-EI-Vrc">
+                                <rect key="frame" x="81" y="238" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="8u3-PJ-iUi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="onDismissKeyboard:" destination="2" eventType="editingDidEndOnExit" id="TCr-m0-7yk"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3Q-jP-svq">
+                                <rect key="frame" x="38" y="290" width="244" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="FdD-Gz-hq1"/>
+                                </constraints>
+                                <state key="normal" title="Start Puzzle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGameStart:" destination="2" eventType="touchUpInside" id="UXC-sC-Dy6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E3Q-jP-svq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="290" id="Oll-b9-OaT"/>
+                            <constraint firstItem="Gcp-t4-Az5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="242" id="Vba-Og-Zj0"/>
+                            <constraint firstItem="7sZ-EI-Vrc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="81" id="Vho-qZ-qdk"/>
+                            <constraint firstItem="bwZ-D8-Mbb" firstAttribute="centerX" secondItem="E3Q-jP-svq" secondAttribute="centerX" id="Z9h-zL-yOj"/>
+                            <constraint firstItem="bwZ-D8-Mbb" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="Zwu-ER-Pqz"/>
+                            <constraint firstItem="bwZ-D8-Mbb" firstAttribute="top" secondItem="3" secondAttribute="top" id="blX-qS-0Hg"/>
+                            <constraint firstItem="Gcp-t4-Az5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="f0k-Wu-GH6"/>
+                            <constraint firstItem="7sZ-EI-Vrc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="238" id="t7M-E1-nYU"/>
+                            <constraint firstItem="bwZ-D8-Mbb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="vne-El-kMv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="bwZ-D8-Mbb" id="rq3-Rj-i72"/>
+                        <outlet property="seedField" destination="7sZ-EI-Vrc" id="f2A-ox-QRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>
